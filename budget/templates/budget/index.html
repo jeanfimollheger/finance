@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="all_categories">
+  <h2>Categories</h2>
+</a>
+
+<a href="all_subcategories">
+  <h2>SubCategories</h2>
+</a>
+
+<a href="all_periods">
+  <h2>Periods</h2>
+</a>
+<br>
+
+<a href= {% url "flux-list" %}>
+  <h2>Tous les flux</h2>
+</a><h6>c'est également ici pour modifier ou supprimer un flux ...</h6>
+<br>
+<a href= {% url "flux-create" %}>
+  <h2>Créer un nouveau flux</h2>
+</a>
+<br>
+
+
+
+{% endblock %}

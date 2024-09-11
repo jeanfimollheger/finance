@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flux_form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    {% block content %}
+
+    <h2>Create flux</h2>
+    <h3>Créer un flux budget ou réel ...</h3>
+
+    <form method="post">
+      {% csrf_token %}
+      <table
+        border="2
+        "
+        cellpadding="12"
+        cellspacing="6"
+        style="text-align: center"
+      >
+        {{form.as_table}}
+      </table>
+      <br />
+      <input type="submit" value="{{text_submit_button}}" />
+    </form>
+
+    {% endblock %}
+  </body>
+</html>

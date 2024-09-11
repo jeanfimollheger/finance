@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flux_confirm_delete</title>
+</head>
+<body>
+  {% block content %}
+  
+    <h2>flux</h2>
+    <h3>un flux à supprimer ?</h3>
+    <h3>Rappel des données de ce flux :</h3>
+    <h4></h4>
+<form method = "POST">
+  {% csrf_token %}
+    <h3>{{flux.budget_or_real}}</h3>
+    <h4>primary key : {{flux.pk}}</h4>
+    <h4>{{flux.category}}/ {{flux.subcategory}}</h4>
+    <h4>{{flux.period.name}} - {{flux.period.multiplier}}   =>   montant de la période : {{flux.amount}} €</h4>
+    <h4>Montant annuel  :  {{flux.annual_amount}} €</h4>
+    <h4></h4>
+    
+    <input type="submit" value="Confirmer la suppression">
+</form>
+  
+  {% endblock %}
+</body>
+</html>

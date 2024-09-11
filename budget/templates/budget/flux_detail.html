@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>
+  <a href="{% url 'flux-update' pk=flux.pk %}">Modifier</a>
+</p>
+<p>
+  <a href="{% url 'flux-delete' pk=flux.pk %}">Supprimer</a>
+</p>  
+  <h2>Détail du flux</h2>
+    <h3>{{flux.budget_or_real}}</h3>
+    <h4>primary key : {{flux.pk}}</h4>
+    <h4>{{flux.category}}/ {{flux.subcategory}}</h4>
+    <h4>{{flux.period.name}} - {{flux.period.multiplier}}   =>   montant de la période : {{flux.amount}} €</h4>
+    <h4>Montant annuel  :  {{flux.annual_amount}} €</h4>
+    <h4></h4>
+{% endblock %}

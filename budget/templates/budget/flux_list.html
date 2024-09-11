@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  
+  <h2>Flux</h2>
+    {% for flux in flux_list %}
+    <a href={% url 'flux-detail' pk=flux.pk %}>
+      <h4>{{flux.budget_or_real}} - {{flux.category}}/ {{flux.subcategory}} => montant annuel : {{flux.annual_amount}} €</h4>
+    </a>
+    {% endfor %}
+  
+{% endblock %}

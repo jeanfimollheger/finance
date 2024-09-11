@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  
+  <h2>Periods</h2>
+    {% for period in all_periods %}
+    <h4>{{period.name}} -  {{period.multiplier}}</h4>
+    {% endfor %}
+  
+{% endblock %}
