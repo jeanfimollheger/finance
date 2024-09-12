@@ -44,5 +44,5 @@ class CreateFluxForm(forms.ModelForm):
               'amount']
     labels = {'budget_or_real':'Budget ou Réel', 'year':'Année', 
               'category' : 'Catégorie','subcategory' : 'Sous-catégorie','period':'Périodicité',
-              'amount':'Montant'}
+              'amount':'Montant période'}
     widgets = {'date': forms.SelectDateWidget(years=range(2023,2030))}

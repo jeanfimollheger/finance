@@ -7,11 +7,21 @@
     <title>budget_application</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
+
   <body>
     <!-- ctrl + shift + "/" -->
     <h1>Budget application</h1>
     <a href="/">Back</a>
-
-    {% block content %} {% endblock %}
+    <main>
+      <div class="flexbox">
+        <h2>flexbox</h2>
+        <ul>
+          <li>boite1</li>
+          <li>boite2</li>
+          <li>boite3</li>
+        </ul>
+      </div>
+      {% block content %} {% endblock %}
+    </main>
   </body>
 </html>
