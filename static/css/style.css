@@ -14,10 +14,11 @@ main {
   box-shadow: 4px -2px 4px 1px black;
 }
 
-.flexbox {
+.flexbox,
+.grid {
   border: 1px solid pink;
   padding: 15px;
-  margin: 1px;
+  margin: 10px;
   border-radius: 37px;
 }
 .flexbox ul {
@@ -38,6 +39,11 @@ main {
   border-radius: 20px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 38% 62%;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -55,3 +61,41 @@ h2 {
 h6 {
   text-align: center;
 }
+/* 
+.grid img {
+  width: 80%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  "i1 i1"
+  "ta ta"
+  "vi bt"
+}
+
+input, textarea {
+  margin: 5px;
+  bottom: 1px solid;
+  padding: 10px;font-size: 1.1rem;
+  font-family: "DMSerif";
+}
+
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+
+#btn-submit {
+  grid-area: bt;
+  cursor: pointer;
+  background: cyan;
+  transition: 0.2s
+} 
+
+#btn-submit: over {
+  background: darkblue;
+  color: white
+} 
+*/
